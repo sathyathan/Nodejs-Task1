@@ -12,6 +12,11 @@ const PORT = 8000;
 //Middleware
 app.use(express.json())
 
+app.get('/',(req,res)=>{
+  // res.status(200).json({message:"Hi all welcome to our first node app"})
+  res.status(200).send(`Welcome to our first app in nodejs`)
+})
+
 
 app.get('/create-read',(req,res)=>{
   let today = format(new Date(),'dd-mm-yyyy-HH-mm-ss')
